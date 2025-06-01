@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Artist Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Your Name</h1>
+  <p>3D Artist & Designer</p>
+  <nav>
+    <a href="#portfolio" tabindex="1">Portfolio</a>
+    <a href="#about" tabindex="2">About</a>
+    <a href="#contact" tabindex="3">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="portfolio" aria-label="Portfolio Gallery">
+    <h2>My 3D Works</h2>
+    <div class="gallery-grid" role="list">
+      <!-- Gallery items with images and captions -->
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="3D Model: Futuristic Car" data-full="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" data-caption="Futuristic Car">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Rendered image of a futuristic car model" loading="lazy" />
+        <div class="caption">Futuristic Car</div>
+      </div>
+
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="3D Model: Abstract Sculpture" data-full="https://images.unsplash.com/photo-1520962915439-fb6eec6bc6c5?auto=format&fit=crop&w=800&q=80" data-caption="Abstract Sculpture">
+        <img src="https://images.unsplash.com/photo-1520962915439-fb6eec6bc6c5?auto=format&fit=crop&w=400&q=80" alt="Rendered image of an abstract 3D sculpture" loading="lazy" />
+        <div class="caption">Abstract Sculpture</div>
+      </div>
+
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="3D Model: Spaceship" data-full="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" data-caption="Spaceship">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Rendered image of a spaceship 3D model" loading="lazy" />
+        <div class="caption">Spaceship</div>
+      </div>
+
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="3D Model: Character Bust" data-full="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80" data-caption="Character Bust">
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Rendered image of a 3D character bust" loading="lazy" />
+        <div class="caption">Character Bust</div>
+      </div>
+
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="3D Model: Architectural Visualization" data-full="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" data-caption="Architectural Visualization">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Rendered image of an architectural 3D visualization" loading="lazy" />
+        <div class="caption">Architectural Visualization</div>
+      </div>
+
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="3D Model: Fantasy Weapon" data-full="https://images.unsplash.com/photo-1525441794140-8ec0408dfdeb?auto=format&fit=crop&w=800&q=80" data-caption="Fantasy Weapon">
+        <img src="https://images.unsplash.com/photo-1525441794140-8ec0408dfdeb?auto=format&fit=crop&w=400&q=80" alt="Rendered image of a fantasy weapon 3D model" loading="lazy" />
+        <div class="caption">Fantasy Weapon</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="About Me">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate 3D artist with expertise in modeling, texturing, and rendering. I love bringing imaginative concepts to life with intricate details and realistic visuals. Skilled in software like Blender, Maya, and Substance Painter, I continuously strive to push creative boundaries and expand my skills.
+    </p>
+  </section>
+
+  <section id="contact" aria-label="Contact Information">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out if you'd like to collaborate or have any inquiries.</p>
+    <a class="email-link" href="mailto:your.email@example.com" aria-label="Send Email to Your Email">your.email@example.com</a>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 Your Name - All Rights Reserved
+</footer>
+
+<!-- Modal Lightbox -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caption" tabindex="-1">
+  <div id="modal-content">
+    <button id="modal-close" aria-label="Close Modal">&times;</button>
+    <img src="" alt="" id="modal-img" />
+    <div id="modal-caption"></div>
+  </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,274 @@
+/* Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    /* Reset and basics */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f1424;
+      color: #f0f0f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #66d9e8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff6f91;
+    }
+
+    /* Header */
+    header {
+      background: #191e38;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #ff6f91;
+      user-select: none;
+    }
+    header p {
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #66d9e8;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ff9a76;
+      outline: none;
+    }
+
+    /* Main container */
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Portfolio Gallery */
+    section#portfolio {
+      margin-bottom: 4rem;
+    }
+    section#portfolio h2 {
+      font-size: 2rem;
+      color: #ff6f91;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 1.2px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+      gap: 1.2rem;
+    }
+    .gallery-item {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(255, 111, 145, 0.15);
+      background: #151a30;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      user-select: none;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 32px rgba(255, 111, 145, 0.45);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      display: block;
+      pointer-events: none;
+    }
+    .gallery-item .caption {
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f0f0dd;
+      text-align: center;
+      flex-grow: 1;
+      user-select: text;
+    }
+
+    /* About Section */
+    section#about {
+      margin-bottom: 4rem;
+      background: #191e38;
+      padding: 2rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(255,111,145,0.15);
+    }
+    section#about h2 {
+      font-size: 2rem;
+      color: #ff6f91;
+      margin-bottom: 1rem;
+      letter-spacing: 1.2px;
+      text-align: center;
+    }
+    section#about p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+      user-select: text;
+    }
+
+    /* Contact Section */
+    section#contact {
+      background: #191e38;
+      padding: 2rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(255,111,145,0.15);
+      max-width: 450px;
+      margin: 0 auto 4rem auto;
+      text-align: center;
+    }
+    section#contact h2 {
+      font-size: 2rem;
+      color: #ff6f91;
+      margin-bottom: 1rem;
+      letter-spacing: 1.2px;
+    }
+    section#contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      user-select: text;
+    }
+    section#contact a.email-link {
+      display: inline-block;
+      background: #66d9e8;
+      color: #191e38;
+      padding: 0.75rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    section#contact a.email-link:hover,
+    section#contact a.email-link:focus {
+      background-color: #ff6f91;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #666;
+      user-select: none;
+    }
+
+    /* Modal / Lightbox */
+    #modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 20, 36, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1200;
+      padding: 1rem;
+    }
+    #modal.active {
+      display: flex;
+    }
+    #modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 40px #ff6f91aa;
+      background: #191e38;
+      animation: zoomIn 0.3s ease forwards;
+      position: relative;
+      user-select: text;
+    }
+    #modal-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+      border-radius: 16px 16px 0 0;
+    }
+    #modal-caption {
+      color: #eee;
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      background: #121737;
+      border-radius: 0 0 16px 16px;
+      user-select: text;
+    }
+    #modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      color: #ff6f91;
+      cursor: pointer;
+      user-select: none;
+      padding: 0;
+      line-height: 1;
+      transition: color 0.3s ease;
+    }
+    #modal-close:hover,
+    #modal-close:focus {
+      color: #66d9e8;
+      outline: none;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 0.6rem;
+        font-size: 0.9rem;
+      }
+      .gallery-item img {
+        height: 150px;
+      }
+    }
